@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+apply from: "$rootDir/gradle/gretty.plugin" 
+apply from: "$rootDir/gradle/libraries.gradle"
+
+jar {
+    baseName = 'orange-magic-template'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile libs.springMvc
+    compile libs.springContext
+    compile libs.springSecurityConfig
+    compile libs.springSecurityWeb
+    compile libs.springJdbc
+    compile libs.h2database
+    compile libs.hibernateValidator
+    compile libs.commonsLang3
+    compile libs.aspectjWeaver
+    compile libs.log4j
+    testCompile libs.junit
+    testCompile libs.mockitoCore
+    testCompile libs.sprintTest
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+}
+
+war {
+    baseName = 'orange-magic-template'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+gretty {
+	port = 8080
+	contextPath = '/'
+	servletContainer = 'jetty9'
+}

@@ -1,0 +1,18 @@
+
+ext {
+        libs = [:]
+        libs.activation    = 'javax.activation:activation:1.1'
+        libs.springMvc     = 'org.springframework:spring-webmvc:4.0.7.RELEASE'
+        libs.springContext = 'org.springframework:spring-context:4.0.7.RELEASE'
+        libs.springJdbc    = 'org.springframework:spring-jdbc:4.0.7.RELEASE'
+        libs.sprintTest    = 'org.springframework:spring-test:4.0.7.RELEASE'
+        libs.springSecurityWeb = 'org.springframework.security:spring-security-web:3.2.0.RELEASE'
+        libs.springSecurityConfig = 'org.springframework.security:spring-security-config:3.2.0.RELEASE'       
+        libs.h2database  = 'com.h2database:h2:1.4.182'   
+        libs.hibernateValidator = 'org.hibernate:hibernate-validator:5.0.1.Final'
+        libs.commonsLang3  = 'org.apache.commons:commons-lang3:3.1'
+        libs.aspectjWeaver = 'org.aspectj:aspectjweaver:1.7.2'
+        libs.log4j = 'log4j:log4j:1.2.14'
+        libs.junit = 'junit:junit:4.11'  
+        libs.mockitoCore = 'org.mockito:mockito-core:1.9.5'
+}
